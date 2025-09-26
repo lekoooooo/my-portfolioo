@@ -3,12 +3,10 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <main className="px-8 md:px-16 lg:px-32 py-20 text-white">
-      {/* About Section */}
       <section className="mb-20">
         <h1 className="text-[48px] font-bold mb-8">ABOUT ME</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Text */}
           <div>
             <h2 className="text-[28px] font-semibold leading-snug mb-4">
               I am a front-end developer based in Tbilisi.
@@ -25,7 +23,6 @@ export default function AboutPage() {
               to improve my skills.
             </p>
 
-            {/* Buttons */}
             <div className="flex gap-4">
               <button
                 className="
@@ -78,11 +75,10 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Image */}
           <div className="flex justify-center">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/profile.png" // put your photo in public/images
+                src="/images/profile.png"
                 alt="Leko Bebei"
                 width={500}
                 height={500}
@@ -92,7 +88,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Capabilities */}
       <section>
         <h2 className="text-[28px] font-bold mb-6">MY CAPABILITIES</h2>
         <div className="grid md:grid-cols-2 gap-12">
