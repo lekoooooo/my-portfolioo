@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -36,42 +37,26 @@ export default function AboutPage() {
                 DOWNLOAD RESUME
               </button>
 
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  flex items-center justify-center
-                  w-[48px] h-[48px] rounded-full
-                  bg-[#2c2c2c]
-                  shadow-md
-                  active:scale-95 active:shadow-inner
-                  transition-transform duration-150 ease-in-out
-                "
-              >
-                in
-              </a>
-
-              <a
+              <Link
                 href="https://github.com/lekoooooo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  flex items-center justify-center
-                  w-[48px] h-[48px] rounded-full
-                  bg-[#2c2c2c]
-                  shadow-md
-                  active:scale-95 active:shadow-inner
-                  transition-transform duration-150 ease-in-out
-                "
+              flex items-center justify-center
+              w-[52px] h-[52px] rounded-full
+              bg-[#2c2c2c]
+              shadow-md
+              active:scale-95 active:shadow-inner
+              transition-transform duration-150 ease-in-out
+            "
               >
                 <Image
                   src="/images/lilhub.svg"
-                  alt="GitHub"
-                  width={20}
-                  height={20}
+                  width={24}
+                  height={24}
+                  alt="Github"
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
