@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(/public/fonts/BebasNeue-Regular.ttf);
+  font-family: "BigshotOne";
+  src: url(/public/fonts/BigshotOne.ttf);
+  font-family: "Fullday";
+  src: url(/public/fonts/Fullday.ttf);
+}
+
+.font-bebas {
+  font-family: "BebasNeue";
+}
+
+.font-bigShot {
+  font-family: "BigshotOne";
+}
+
+.font-fullDay {
+  font-family: "Fullday";
+}

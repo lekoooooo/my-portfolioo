@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
         <div>
           <Link
             href="/"
-            className="text-[#C7C7C7] hover:text-amber-50 font-bold text-[32px]"
+            className="text-[#C7C7C7] font-bebas hover:text-amber-50 font-bold text-[32px]"
           >
             $velvet21
           </Link>

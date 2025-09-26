@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import "@/app/globals.css";
+import ProjectCard from "./components/ProjectCard";
 
 // import Footer from "../components/Footer";
 
@@ -13,8 +14,8 @@ export default function RootLayout({
       <body className="bg-[#1b1b1b] max-w-[1920px]">
         <Navbar />
 
-        <main className="min-h-screen px-4 sm:px-8 md:px-16">{children}</main>
-
+        <main className=" px-4 sm:px-8 md:px-16">{children}</main>
+        <ProjectCard />
         {/* <Footer /> */}
       </body>
     </html>
