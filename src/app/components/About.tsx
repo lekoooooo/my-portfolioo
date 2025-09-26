@@ -6,17 +6,16 @@ export default function About() {
       <h1 className="text-[48px] font-bold mb-8">ABOUT ME</h1>
       <div className="max-w-3xl">
         <h2 className="text-[28px] font-semibold leading-snug mb-4">
-          I am a front-end developer based in Tbilisi.
-          <br />
-          Has Mechanical Engineering background.
+          I am a front-end developer based in Tbilisi, With all the skills to
+          help you make your website better.
         </h2>
         <p className="text-[#C7C7C7] mb-6">
           I am a front-end developer based in Tbilisi looking for exciting
-          opportunities. Has a Mechanical Engineering background. Likes to focus
-          on accessibility when developing. Passionate and curious about solving
-          problems. Currently, I’m exploring React.js, Next.js and a bit of
-          design. While I am not programming, I enjoy playing football,
-          photography and Valorant. Always learning more to improve my skills.
+          opportunities. Likes to focus on accessibility when developing.
+          Passionate and curious about solving problems. Currently, I’m
+          exploring React.js, Next.js and a bit of node.js, express . . . While
+          I am not programming, I enjoy playing basketball, music and driving.
+          Always learning more to improve my skills.
         </p>
         <Link
           href="/about"
