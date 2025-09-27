@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Projects from "./components/ProjectCard";
+
 export default function Page() {
   return (
     <div>
@@ -18,7 +18,7 @@ export default function Page() {
 
         <div className="flex mt-[40px] gap-[20px]">
           <Link
-            href="mailto:levdidebashvili@gmail.com"
+            href="/about"
             className="
               flex items-center justify-center gap-2
               px-6 py-3 rounded-full
@@ -54,7 +54,6 @@ export default function Page() {
           </Link>
         </div>
       </section>
-      <Projects />
     </div>
   );
 }

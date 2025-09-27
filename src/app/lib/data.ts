@@ -1,5 +1,3 @@
-// src/lib/data.ts
-
 export type Experience = {
   role: string;
   company?: string;
@@ -9,15 +7,15 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Freelance Developer",
-    date: "Nov 2023 – Present",
+    role: "Fullstack Developer",
+    date: "Dec 2024 – Present",
     description:
-      "Worked on multiple freelance projects delivering clean, responsive, and accessible websites. Focused on React, Next.js, and Tailwind CSS.",
+      "Worked on multiple  projects delivering clean, responsive, and accessible websites. Focused on React, Next.js, and Tailwind CSS.",
   },
   {
-    role: "Front-End Intern",
-    company: "Roos Tech",
-    date: "Sep 2023 – Nov 2023",
+    role: "Fullstack Intern",
+    company: "Re-educate",
+    date: "Oct 2024 – Present",
     description:
       "Contributed to the front-end development of client projects, writing reusable components and improving UI consistency across web apps.",
   },
@@ -43,7 +41,7 @@ export const contactLinks: ContactLink[] = [
 
   {
     name: "Instagram",
-    href: "https://instagram.com/YOUR_INSTAGRAM",
+    href: "https://www.instagram.com/ft.leko",
     icon: "/images/instagram.svg",
   },
 ];
