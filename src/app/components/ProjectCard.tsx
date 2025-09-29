@@ -10,19 +10,19 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="grid grid-cols-1 md:grid-cols-2 gap-[0px]  items-start"
+            className="grid grid-cols-1 xl:grid-cols-[630px_1fr] gap-x-12 gap-y-10 items-start"
           >
-            <div className="bg-[#333333c4] ml-[50px] lg:w-[630px]  p-4 rounded-lg flex justify-center">
+            <div className="bg-[#333333c4] p-4 rounded-lg flex-shrink-0 w-[630px]">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={550}
                 height={400}
-                className="rounded-md"
+                className="rounded-md w-full h-auto object-cover"
               />
             </div>
 
-            <div className="mr-[30px] ">
+            <div>
               <h3 className="text-white text-[25px] font-bold mb-4">
                 {project.title}
               </h3>
@@ -54,7 +54,7 @@ export default function Projects() {
                   <Link
                     href={project.demoUrl}
                     target="_blank"
-                    className="px-4 py-2 bg-[#6896f8]  rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
+                    className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
                   >
                     LIVE DEMO ↗
                   </Link>
@@ -62,7 +62,7 @@ export default function Projects() {
                 <Link
                   href={project.githubUrl}
                   target="_blank"
-                  className="px-4 py-2 bg-[#6896f8] rounded-full  text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
+                  className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
                 >
                   SEE ON GITHUB
                   <Image
