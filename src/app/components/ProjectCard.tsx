@@ -49,7 +49,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex justify-center lg:justify-start gap-4 mt-6">
                 {project.demoUrl && (
                   <Link
                     href={project.demoUrl}

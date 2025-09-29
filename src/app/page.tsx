@@ -62,7 +62,15 @@ export default function Page() {
               width={460}
               height={460}
               alt="lex"
-              className="mr-[70px] rounded-lg"
+              className=" lg:mr-[170px]
+    rounded-lg 
+    flex-shrink-0
+    w-[250px] h-[250px]        
+    sm:w-[300px] sm:h-[300px]  
+    md:w-[350px] md:h-[350px]  
+    lg:w-[400px] lg:h-[400px]  
+    xl:w-[460px] xl:h-[460px]  
+  "
             />
           </div>
         </div>
