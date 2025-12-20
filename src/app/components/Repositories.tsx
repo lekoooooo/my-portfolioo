@@ -36,34 +36,7 @@
 //                 </span>
 //               </div>
 //             )}
-//             <div className="flex gap-4">
-//               {project.githubUrl && !project.isPrivate && (
-//                 <Link
-//                   href={project.githubUrl}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-[#C6F368] hover:underline text-sm"
-//                 >
-//                   GitHub
-//                 </Link>
-//               )}
-//               {project.demoUrl && (
-//                 <Link
-//                   href={project.demoUrl}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-[#C6F368] hover:underline text-sm"
-//                 >
-//                   Demo
-//                 </Link>
-//               )}
-//             </div>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
+//
 "use client";
 import Image from "next/image";
 import Link from "next/link";
