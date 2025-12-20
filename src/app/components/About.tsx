@@ -189,29 +189,6 @@
 //           Always learning more to improve my skills.
 //         </motion.p>
 
-//         {/* Show "Click for more info" only if showMoreLink is true */}
-//         {showMoreLink && (
-//           <motion.div
-//             className="mt-8"
-//             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
-//             transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-//           >
-//             <Link
-//               href="/about"
-//               className="inline-flex items-center gap-2 px-6 py-3 bg-[#6896f8] text-black font-medium rounded-full shadow-md hover:scale-105 transition"
-//             >
-//               Click for more info →
-//             </Link>
-//           </motion.div>
-//         )}
-//         <About showMoreLink={false} />
-//       </motion.div>
-//     </section>
-//   );
-// }
-
-////////////////////////////////////
-
 "use client";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
