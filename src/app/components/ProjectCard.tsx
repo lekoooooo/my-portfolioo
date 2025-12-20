@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { projects } from "@/app/lib/projects";
 
 export default function Projects() {
@@ -51,13 +52,18 @@ export default function Projects() {
 
               <div className="flex justify-center lg:justify-start gap-4 mt-6">
                 {project.demoUrl && (
-                  <Link
-                    href={project.demoUrl}
-                    target="_blank"
-                    className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
+                  <motion.div
+                    whileTap={{ x: 10, scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    LIVE DEMO ↗
-                  </Link>
+                    <Link
+                      href={project.demoUrl}
+                      target="_blank"
+                      className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
+                    >
+                      LIVE DEMO ↗
+                    </Link>
+                  </motion.div>
                 )}
                 <Link
                   href={project.githubUrl}

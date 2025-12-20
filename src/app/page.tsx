@@ -1,23 +1,40 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import Projects from "./components/ProjectCard";
 
 export default function Page() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
   return (
     <div>
-      <section className="py-20">
+      <section ref={ref} className="py-20">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
           <div>
-            <h2 className="text-[#FFFFFF] font-bigShot text-[65px]">
+            <motion.h2
+              className="text-[#FFFFFF] font-bigShot text-[65px]"
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : -50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               Hi, I am Leko bebei.
-            </h2>
-            <p className="text-[#C7C7C7] font-bigShot w-[490px] text-[20px]">
+            </motion.h2>
+            <motion.p
+              className="text-[#C7C7C7] font-bigShot w-[490px] text-[20px]"
+              animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -50 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
               From Tbilisi, Georgia. Front end developer, passionate about
               building accessible and user-friendly websites.
-            </p>
+            </motion.p>
 
-            <div className="flex mt-[40px] gap-[20px]">
+            <motion.div
+              className="flex mt-[40px] gap-[20px]"
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
               <Link
                 href="mailto:levdidebashvili@gmail.com"
                 className="
@@ -53,10 +70,14 @@ export default function Page() {
                   alt="Github"
                 />
               </Link>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex-shrink-0">
+          <motion.div
+            className="flex-shrink-0"
+            animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.8 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          >
             <Image
               src="/images/leko.jpg"
               width={460}
@@ -72,7 +93,7 @@ export default function Page() {
     xl:w-[460px] xl:h-[460px]  
   "
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
