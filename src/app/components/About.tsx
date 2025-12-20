@@ -212,8 +212,6 @@
 
 ////////////////////////////////////
 
-// components/About.tsx
-// components/About.tsx
 "use client";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
