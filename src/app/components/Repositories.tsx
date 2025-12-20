@@ -132,7 +132,7 @@ export default function Repositories() {
             </motion.div>
           );
 
-          // 🔓 PUBLIC → clickable card
+          // PUBLIC clickable card
           if (project.githubUrl && !project.isPrivate) {
             return (
               <Link
@@ -147,7 +147,7 @@ export default function Repositories() {
             );
           }
 
-          // 🔒 PRIVATE → not clickable
+          // PRIVATE  not clickable
           return <div key={project.id}>{CardContent}</div>;
         })}
       </div>
