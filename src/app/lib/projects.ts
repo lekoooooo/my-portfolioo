@@ -23,4 +23,15 @@ export const projects: Project[] = [
     demoUrl: "https://shop-co.vercel.app",
     image: "/images/shopco.webp",
   },
+  {
+    id: "unilab-client",
+    title: "UniLab Client",
+    description:
+      "UniLab Client is a client-side application for UniLab, showcasing responsive UI design and seamless navigation. Built with Next.js and Tailwind CSS, focusing on user experience and scalability.",
+    year: 2023,
+    role: "Front-end Developer",
+    githubUrl: "https://github.com/Mind1a/unilab-client",
+    demoUrl: "https://unilab-client.vercel.app",
+    image: "/images/unilabClient.png",
+  },
 ];
