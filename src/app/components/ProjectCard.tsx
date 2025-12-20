@@ -65,19 +65,21 @@ export default function Projects() {
                     </Link>
                   </motion.div>
                 )}
-                <Link
-                  href={project.githubUrl}
-                  target="_blank"
-                  className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
-                >
-                  SEE ON GITHUB
-                  <Image
-                    src="/images/lilhub.svg"
-                    width={18}
-                    height={18}
-                    alt="GitHub"
-                  />
-                </Link>
+                {!project.isPrivate && project.githubUrl && (
+                  <Link
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="px-4 py-2 bg-[#6896f8] rounded-full text-black font-medium flex items-center gap-2 shadow-md active:scale-95 transition"
+                  >
+                    SEE ON GITHUB
+                    <Image
+                      src="/images/lilhub.svg"
+                      width={18}
+                      height={18}
+                      alt="GitHub"
+                    />
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -6,6 +6,8 @@ export type Project = {
   year: number;
   role: string;
   demoUrl?: string;
-  githubUrl: string;
+  githubUrl?: string;
   image: string;
+  language?: string;
+  isPrivate?: boolean;
 };

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Projects from "./components/ProjectCard";
+import About from "./about/page";
+import AboutComponent from "./components/About";
 
 export default function Page() {
   const ref = useRef(null);
@@ -27,7 +29,7 @@ export default function Page() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               From Tbilisi, Georgia. Front end developer, passionate about
-              building accessible and user-friendly websites.
+              building accessible and user-friendly and pixel perfect websites.
             </motion.p>
 
             <motion.div
@@ -98,6 +100,7 @@ export default function Page() {
       </section>
 
       <Projects />
+      <AboutComponent showMoreLink={true} />
     </div>
   );
 }

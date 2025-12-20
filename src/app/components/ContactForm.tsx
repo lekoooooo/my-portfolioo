@@ -25,7 +25,7 @@ export default function ContactForm() {
 
   return (
     <div className="grid md:grid-cols-2 gap-12">
-      <div>
+      <div className="bg-black p-6 rounded-lg shadow-lg">
         <h2 className="text-[28px] font-bold mb-4">LET’S CONNECT</h2>
         <p className="text-[#C7C7C7] mb-4">
           Say hello at{" "}
