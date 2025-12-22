@@ -88,6 +88,3 @@ export default function Repositories() {
     </section>
   );
 }
-
-/// fordacommmmmm
-/////jt4midablllll
