@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import PageLoader from "./PageLoader/pageLoader";
+import PageLoader from "./PageLoader/PageLoader";
 
 import Navbar from "./components/Navbar";
 

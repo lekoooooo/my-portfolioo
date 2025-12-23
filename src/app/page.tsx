@@ -127,7 +127,7 @@ export default function Page() {
         </motion.div>
       </section>
 
-      <AboutComponent />
+      <AboutComponent showMoreLink={true} />
     </div>
   );
 }
