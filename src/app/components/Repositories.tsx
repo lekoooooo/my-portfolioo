@@ -8,7 +8,6 @@ export default function Repositories() {
   return (
     <section className="py-20">
       <h2 className="text-[28px] font-bold mb-8">MY REPOSITORIES</h2>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => {
           const CardContent = (
@@ -84,6 +83,18 @@ export default function Repositories() {
           // PRIVATE  not clickable
           return <div key={project.id}>{CardContent}</div>;
         })}
+      </div>
+      <div>
+        <motion.div className="mt-8">
+          <div className="flex justify-end mt-6">
+            <Link
+              href="/work"
+              className="inline-flex gap-2 px-6 py-3 bg-[#C6F368] text-black font-medium rounded-full shadow-md hover:scale-105 transition"
+            >
+              Click for more repositories →
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
