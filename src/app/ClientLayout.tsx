@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import PageLoader from "./PageLoader/pageLoader";
 
 import Navbar from "./components/Navbar";
-import About from "./components/About";
 
 export default function ClientLayout({
   children,
@@ -14,10 +13,9 @@ export default function ClientLayout({
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Run AFTER hydration
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 600); // ⬅️ adjust (400–800ms recommended)
+    }, 600); //
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +28,6 @@ export default function ClientLayout({
         <>
           <Navbar />
           <main className="px-4 sm:px-8 md:px-16">{children}</main>
-          <About />
         </>
       )}
     </>

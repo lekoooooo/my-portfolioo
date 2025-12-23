@@ -111,7 +111,7 @@ export default function Page() {
           animate={projectsInView ? { opacity: 1, x: 0 } : {}}
           transition={{
             duration: 1,
-            ease: [0.16, 1, 0.3, 1], // premium smooth easing
+            ease: [0.16, 1, 0.3, 1],
           }}
         >
           <Projects />
@@ -127,7 +127,7 @@ export default function Page() {
         </motion.div>
       </section>
 
-      <AboutComponent showMoreLink={true} />
+      <AboutComponent />
     </div>
   );
 }
