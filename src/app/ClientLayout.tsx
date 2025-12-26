@@ -27,7 +27,7 @@ export default function ClientLayout({
       {!loading && (
         <>
           <Navbar />
-          <main className="px-4 sm:px-8 md:px-16">{children}</main>
+          <main className="px-2 sm:px-4 md:px-8 lg:px-16">{children}</main>
         </>
       )}
     </>

@@ -14,11 +14,11 @@ export default function Page() {
 
   return (
     <div>
-      <section ref={heroRef} className="py-20">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-          <div>
+      <section ref={heroRef} className="py-12 md:py-20">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-10">
+          <div className="text-center md:text-left">
             <motion.h2
-              className="text-[#FFFFFF] font-bigShot text-[65px]"
+              className="text-[#FFFFFF] font-bigShot text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[65px] leading-tight"
               animate={{
                 opacity: heroInView ? 1 : 0,
                 y: heroInView ? 0 : -50,
@@ -29,7 +29,7 @@ export default function Page() {
             </motion.h2>
 
             <motion.p
-              className="text-[#C7C7C7] font-bigShot w-[490px] text-[20px]"
+              className="text-[#C7C7C7] font-bigShot text-base sm:text-lg md:text-xl lg:text-[20px] max-w-full sm:max-w-md md:max-w-lg lg:w-[490px] mt-4 md:mt-0"
               animate={{
                 opacity: heroInView ? 1 : 0,
                 x: heroInView ? 0 : -50,
@@ -45,7 +45,7 @@ export default function Page() {
             </motion.p>
 
             <motion.div
-              className="flex mt-[40px] gap-[20px]"
+              className="flex flex-col sm:flex-row mt-8 md:mt-[40px] gap-4 sm:gap-[20px] items-center md:items-start"
               animate={{
                 opacity: heroInView ? 1 : 0,
                 y: heroInView ? 0 : 50,
@@ -60,22 +60,22 @@ export default function Page() {
                 href="https://www.linkedin.com/in/levan-didebashvili-480837387/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#6896f8] text-black font-semibold shadow-md active:scale-95 transition"
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#6896f8] text-black font-semibold shadow-md active:scale-95 transition text-sm sm:text-base"
               >
-                CONTACT ME
-                <span className="w-2 h-2 rounded-full bg-black" />
+                CONTACT ME 🙉
               </Link>
 
               <Link
                 href="https://github.com/lekoooooo"
                 target="_blank"
-                className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-[#2c2c2c] shadow-md active:scale-95 transition"
+                className="flex items-center justify-center w-12 h-12 sm:w-[52px] sm:h-[52px] rounded-full bg-[#2c2c2c] shadow-md active:scale-95 transition"
               >
                 <Image
                   src="/images/lilhub.svg"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt="Github"
+                  className="sm:w-6 sm:h-6"
                 />
               </Link>
             </motion.div>
@@ -87,13 +87,14 @@ export default function Page() {
               scale: heroInView ? 1 : 0.85,
             }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="mt-8 md:mt-0"
           >
             <Image
               src="/images/leko.jpg"
               width={460}
               height={460}
               alt="Leko"
-              className="rounded-lg w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[460px] xl:h-[460px]"
+              className="rounded-lg w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-[460px] xl:h-[460px] object-cover"
             />
           </motion.div>
         </div>
@@ -103,10 +104,10 @@ export default function Page() {
         <div className="mt-8">
           <Projects />
 
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-center md:justify-end mt-6">
             <Link
               href="/work"
-              className="inline-flex gap-2 px-6 py-3 bg-[#6896f8] text-black font-medium rounded-full shadow-md hover:scale-105 transition"
+              className="inline-flex gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-[#6896f8] text-black font-medium rounded-full shadow-md hover:scale-105 transition text-sm sm:text-base"
             >
               Click for more repositories →
             </Link>

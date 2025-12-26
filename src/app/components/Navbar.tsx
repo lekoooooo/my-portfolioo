@@ -3,21 +3,21 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <header className="px-6 ">
+    <header className="px-4 sm:px-6">
       <div className="flex justify-between items-center py-4">
         <div>
           <Link
             href="/"
-            className="text-[#C7C7C7] font-bebas hover:text-amber-50 font-bold text-[32px]"
+            className="text-[#C7C7C7] font-bebas hover:text-amber-50 font-bold text-2xl sm:text-3xl lg:text-[32px]"
           >
             $velvet21
           </Link>
         </div>
 
         <nav className="flex">
-          <ul className="flex gap-[32px]  list-none ">
+          <ul className="flex gap-4 sm:gap-6 lg:gap-[32px] list-none text-sm sm:text-base">
             <li>
-              <Link href="/projects" className="hover:underline text-[#C7C7C7]">
+              <Link href="/work" className="hover:underline text-[#C7C7C7]">
                 Work
               </Link>
             </li>

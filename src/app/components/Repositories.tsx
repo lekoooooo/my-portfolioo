@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 
 export default function Repositories() {
   return (
-    <section className="py-20">
-      <h2 className="text-[28px] font-bold mb-8">MY REPOSITORIES</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className="py-12 lg:py-20">
+      <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-6 lg:mb-8">MY REPOSITORIES</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {projects.map((project, index) => {
           const CardContent = (
             <motion.div
-              className={`bg-[#1a1a1a] rounded-lg p-6 border transition-colors
+              className={`bg-[#1a1a1a] rounded-lg p-4 sm:p-6 border transition-colors
                 ${
                   project.isPrivate
                     ? "border-[#333] cursor-not-allowed"
@@ -22,32 +22,32 @@ export default function Repositories() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold text-white">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-white">
                   {project.title}
                 </h3>
 
                 {project.isPrivate && (
-                  <span className="text-[#C7C7C7] text-sm">🔒 Private</span>
+                  <span className="text-[#C7C7C7] text-xs sm:text-sm">🔒 Private</span>
                 )}
               </div>
 
-              <p className="text-[#C7C7C7] text-sm mb-4 line-clamp-3">
+              <p className="text-[#C7C7C7] text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
                 {project.description}
               </p>
 
               {project.language && (
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-[#C6F368]"></div>
-                  <span className="text-[#C7C7C7] text-sm">
+                <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#C6F368]"></div>
+                  <span className="text-[#C7C7C7] text-xs sm:text-sm">
                     {project.language}
                   </span>
                 </div>
               )}
 
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4">
                 {project.githubUrl && !project.isPrivate && (
-                  <span className="text-[#C6F368] text-sm">GitHub →</span>
+                  <span className="text-[#C6F368] text-xs sm:text-sm">GitHub →</span>
                 )}
 
                 {project.demoUrl && (
@@ -55,7 +55,7 @@ export default function Repositories() {
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#C6F368] hover:underline text-sm"
+                    className="text-[#C6F368] hover:underline text-xs sm:text-sm"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Demo
@@ -85,11 +85,11 @@ export default function Repositories() {
         })}
       </div>
       <div>
-        <motion.div className="mt-8">
-          <div className="flex justify-end mt-6">
+        <motion.div className="mt-6 lg:mt-8">
+          <div className="flex justify-center lg:justify-end mt-4 lg:mt-6">
             <Link
               href="/work"
-              className="inline-flex gap-2 px-6 py-3 bg-[#C6F368] text-black font-medium rounded-full shadow-md hover:scale-105 transition"
+              className="inline-flex gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-[#C6F368] text-black font-medium rounded-full shadow-md hover:scale-105 transition text-sm sm:text-base"
             >
               Click for more repositories →
             </Link>
