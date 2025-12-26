@@ -12,12 +12,6 @@ export default function Page() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: false });
 
-  const projectsRef = useRef(null);
-  const projectsInView = useInView(projectsRef, {
-    once: true,
-    margin: "-100px",
-  });
-
   return (
     <div>
       <section ref={heroRef} className="py-20">
@@ -63,7 +57,9 @@ export default function Page() {
               }}
             >
               <Link
-                href="mailto:levdidebashvili@gmail.com"
+                href="https://www.linkedin.com/in/levan-didebashvili-480837387/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#6896f8] text-black font-semibold shadow-md active:scale-95 transition"
               >
                 CONTACT ME
@@ -104,16 +100,7 @@ export default function Page() {
       </section>
 
       <section>
-        <motion.div
-          ref={projectsRef}
-          className="mt-8"
-          initial={{ opacity: 0, x: -120 }}
-          animate={projectsInView ? { opacity: 1, x: 0 } : {}}
-          transition={{
-            duration: 1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
+        <div className="mt-8">
           <Projects />
 
           <div className="flex justify-end mt-6">
@@ -124,12 +111,10 @@ export default function Page() {
               Click for more repositories →
             </Link>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <AboutComponent showMoreLink={true} />
     </div>
   );
 }
-
-// sm tbbb

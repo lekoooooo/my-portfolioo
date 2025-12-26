@@ -8,10 +8,19 @@ export default function Projects() {
     <section className="py-20">
       <div className="border-[1px] mb-[35px] border-[#c6c7c8] flex"></div>
       <div className="space-y-20">
-        {projects.map((project) => (
-          <div
+        {projects.map((project, index) => (
+          <motion.div
             key={project.id}
             className="grid grid-cols-1 xl:grid-cols-[630px_1fr] gap-x-12 gap-y-10 items-start"
+            initial={{ opacity: 0, x: -120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+              delay: index * 0.15,
+            }}
+            viewport={{ once: false, margin: "-100px" }}
           >
             <div className="bg-[#333333c4] p-4 rounded-lg flex-shrink-0 w-[630px]">
               <Image
@@ -82,7 +91,7 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
