@@ -26,7 +26,9 @@ export default function ContactForm() {
   return (
     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
       <div className="bg-black p-4 sm:p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4">LET'S CONNECT</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4">
+          LET'S CONNECT
+        </h2>
         <p className="text-[#C7C7C7] mb-4 text-sm sm:text-base">
           Say hello at{" "}
           <span className="text-[#C6F368] hover:cursor-pointer">
@@ -42,7 +44,13 @@ export default function ContactForm() {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 sm:w-[48px] sm:h-[48px] rounded-full bg-[#2c2c2c] hover:bg-[#3a3a3a] transition"
             >
-              <Image src={link.icon} width={18} height={18} alt={link.name} className="sm:w-6 sm:h-6" />
+              <Image
+                src={link.icon}
+                width={18}
+                height={18}
+                alt={link.name}
+                className="sm:w-6 sm:h-6"
+              />
             </a>
           ))}
         </div>

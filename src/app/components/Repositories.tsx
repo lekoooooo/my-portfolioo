@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 export default function Repositories() {
   return (
     <section className="py-12 lg:py-20">
-      <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-6 lg:mb-8">MY REPOSITORIES</h2>
+      <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-6 lg:mb-8">
+        MY REPOSITORIES
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {projects.map((project, index) => {
           const CardContent = (
@@ -28,7 +30,9 @@ export default function Repositories() {
                 </h3>
 
                 {project.isPrivate && (
-                  <span className="text-[#C7C7C7] text-xs sm:text-sm">🔒 Private</span>
+                  <span className="text-[#C7C7C7] text-xs sm:text-sm">
+                    🔒 Private
+                  </span>
                 )}
               </div>
 
@@ -47,7 +51,9 @@ export default function Repositories() {
 
               <div className="flex gap-3 sm:gap-4">
                 {project.githubUrl && !project.isPrivate && (
-                  <span className="text-[#C6F368] text-xs sm:text-sm">GitHub →</span>
+                  <span className="text-[#C6F368] text-xs sm:text-sm">
+                    GitHub →
+                  </span>
                 )}
 
                 {project.demoUrl && (

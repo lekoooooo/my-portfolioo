@@ -9,7 +9,9 @@ export default function AboutPage() {
       <AboutComponent /> {/* without  showMoreLink  */}
       <div className="border-t border-[#333] pt-4 lg:pt-2"></div>
       <section>
-        <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4 lg:mb-6">MY EXPERIENCE</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4 lg:mb-6">
+          MY EXPERIENCE
+        </h2>
         <Experience />
       </section>
       <div className="border-t border-[#333] pt-4 lg:pt-2"></div>
