@@ -60,7 +60,7 @@ export default function Page() {
                 href="https://www.linkedin.com/in/levan-didebashvili-480837387/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#6896f8] text-black font-semibold shadow-md active:scale-95 transition text-sm sm:text-base"
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#00494B] text-black font-semibold shadow-md active:scale-95 transition text-sm sm:text-base"
               >
                 CONTACT ME 🙉
               </Link>
