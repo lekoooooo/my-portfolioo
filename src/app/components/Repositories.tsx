@@ -53,7 +53,6 @@ export default function Repositories() {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        // Fetch user's own repos
         const response = await fetch(
           "https://api.github.com/users/lekoooooo/repos?sort=updated&per_page=100"
         );
@@ -67,7 +66,6 @@ export default function Repositories() {
         );
         setRepos(vercelRepos);
 
-        // Fetch contributions (repos user has contributed to)
         const eventsResponse = await fetch(
           "https://api.github.com/users/lekoooooo/events?per_page=100"
         );
@@ -143,12 +141,6 @@ export default function Repositories() {
                 <h3 className="text-lg sm:text-xl font-semibold text-white">
                   {repo.name}
                 </h3>
-
-                {repo.private && (
-                  <span className="text-[#C7C7C7] text-xs sm:text-sm">
-                    🔒 Private
-                  </span>
-                )}
               </div>
 
               <p className="text-[#C7C7C7] text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
@@ -180,8 +172,54 @@ export default function Repositories() {
             </motion.div>
           );
 
-          // PUBLIC clickable card
-          if (!repo.private) {
+          return <div key={repo.id}>{CardContent}</div>;
+        })}
+      </div>
+
+      {contributedRepos.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          {contributedRepos.map((repo, index) => {
+            const CardContent = (
+              <motion.div
+                className="bg-[#1a1a1a] rounded-lg p-4 sm:p-6 border border-[#333] hover:border-[#C6F368] cursor-pointer transition-colors"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">
+                    {repo.name}
+                  </h3>
+                </div>
+
+                <p className="text-[#C7C7C7] text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+                  {repo.description || "No description available"}
+                </p>
+
+                {repo.language && (
+                  <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                    <div
+                      className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
+                      style={{
+                        backgroundColor:
+                          languageColors[repo.language] ||
+                          languageColors.default,
+                      }}
+                    ></div>
+                    <span className="text-[#C7C7C7] text-xs sm:text-sm">
+                      {repo.language}
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex gap-3 sm:gap-4">
+                  <span className="text-[#C6F368] text-xs sm:text-sm">
+                    GitHub →
+                  </span>
+                </div>
+              </motion.div>
+            );
+
             return (
               <Link
                 key={repo.id}
@@ -193,83 +231,8 @@ export default function Repositories() {
                 {CardContent}
               </Link>
             );
-          }
-
-          // PRIVATE not clickable
-          return <div key={repo.id}>{CardContent}</div>;
-        })}
-      </div>
-
-      {contributedRepos.length > 0 && (
-        <>
-          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-6 lg:mb-8 mt-12">
-            CONTRIBUTED REPOSITORIES
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-            {contributedRepos.map((repo, index) => {
-              const CardContent = (
-                <motion.div
-                  className="bg-[#1a1a1a] rounded-lg p-4 sm:p-6 border border-[#333] hover:border-[#C6F368] cursor-pointer transition-colors"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">
-                      {repo.name}
-                    </h3>
-                    <span className="text-[#C6F368] text-xs sm:text-sm">
-                      Contributed
-                    </span>
-                  </div>
-
-                  <p className="text-[#C7C7C7] text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
-                    {repo.description || "No description available"}
-                  </p>
-
-                  {repo.language && (
-                    <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                      <div
-                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
-                        style={{
-                          backgroundColor:
-                            languageColors[repo.language] ||
-                            languageColors.default,
-                        }}
-                      ></div>
-                      <span className="text-[#C7C7C7] text-xs sm:text-sm">
-                        {repo.language}
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="flex gap-3 sm:gap-4">
-                    <span className="text-[#C6F368] text-xs sm:text-sm">
-                      GitHub →
-                    </span>
-
-                    <div className="flex items-center gap-2 text-[#C7C7C7] text-xs sm:text-sm">
-                      <span>⭐ {repo.stargazers_count}</span>
-                      <span>🍴 {repo.forks_count}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-
-              return (
-                <Link
-                  key={repo.id}
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  {CardContent}
-                </Link>
-              );
-            })}
-          </div>
-        </>
+          })}
+        </div>
       )}
     </section>
   );
