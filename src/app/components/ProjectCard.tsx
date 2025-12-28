@@ -86,7 +86,7 @@ export default function Projects() {
                   >
                     SEE ON GITHUB
                     <Image
-                      src="/images/lilhub.svg"
+                      src="/images/svg/lilhub.svg"
                       width={16}
                       height={16}
                       alt="GitHub"

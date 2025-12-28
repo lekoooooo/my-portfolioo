@@ -31,12 +31,12 @@ export const contactLinks: ContactLink[] = [
   {
     name: "Email",
     href: "mailto:levdidebashvili@gmail.com",
-    icon: "/images/email.png",
+    icon: "/images/png/email.png",
   },
   {
     name: "GitHub",
     href: "https://github.com/lekoooooo",
-    icon: "/images/lilhub.svg",
+    icon: "/images/svg/lilhub.svg",
   },
 
   {

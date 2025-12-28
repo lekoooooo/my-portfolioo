@@ -10,7 +10,7 @@ export const projects: Project[] = [
     role: "Front-end Developer",
     githubUrl: "https://github.com/Saba-Vardosanidze/StreamVibe",
     demoUrl: "https://streamvibe.vercel.app", // if deployed
-    image: "/images/streamvibe.png",
+    image: "/images/png/streamvibe.png",
     language: "TypeScript",
     isPrivate: false,
   },
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     role: "Front-end Developer",
     githubUrl: "https://github.com/Mind1a/unilab-client",
     demoUrl: "https://unilab-client.vercel.app",
-    image: "/images/unilabClient.png",
+    image: "/images/png/unilabClient.png",
     language: "JavaScript",
     isPrivate: false,
   },

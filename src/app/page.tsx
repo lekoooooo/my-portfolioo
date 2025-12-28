@@ -62,7 +62,13 @@ export default function Page() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#00494B] text-black font-semibold shadow-md active:scale-95 transition text-sm sm:text-base"
               >
-                CONTACT ME 🙉
+                <Image
+                  src="/images/svg/linkedin.svg"
+                  width={20}
+                  height={20}
+                  alt="LinkedIn"
+                />
+                LinkedIn
               </Link>
 
               <Link
@@ -71,7 +77,7 @@ export default function Page() {
                 className="flex items-center justify-center w-12 h-12 sm:w-[52px] sm:h-[52px] rounded-full bg-[#2c2c2c] shadow-md active:scale-95 transition"
               >
                 <Image
-                  src="/images/lilhub.svg"
+                  src="/images/svg/lilhub.svg"
                   width={20}
                   height={20}
                   alt="Github"

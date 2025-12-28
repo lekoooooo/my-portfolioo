@@ -46,7 +46,7 @@ export default function Page() {
             "
           >
             <Image
-              src="/images/lilhub.svg"
+              src="/images/svg/lilhub.svg"
               width={24}
               height={24}
               alt="Github"
