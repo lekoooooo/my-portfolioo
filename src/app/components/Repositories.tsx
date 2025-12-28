@@ -17,6 +17,33 @@ interface Repo {
   homepage: string | null;
 }
 
+// GitHub language colors
+const languageColors: { [key: string]: string } = {
+  JavaScript: "#f1e05a",
+  TypeScript: "#3178c6",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  Python: "#3572A5",
+  Java: "#ed8e00",
+  "C++": "#f34b7d",
+  C: "#555555",
+  "C#": "#239120",
+  PHP: "#4F5D95",
+  Ruby: "#701516",
+  Go: "#00ADD8",
+  Rust: "#dea584",
+  Swift: "#ffac45",
+  Kotlin: "#F18E33",
+  Dart: "#00B4AB",
+  Shell: "#89e051",
+  PowerShell: "#012456",
+  Vue: "#4FC08D",
+  React: "#61DAFB",
+  Svelte: "#ff3e00",
+  // Default color for unknown languages
+  default: "#586069",
+};
+
 export default function Repositories() {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [contributedRepos, setContributedRepos] = useState<Repo[]>([]);
@@ -130,7 +157,13 @@ export default function Repositories() {
 
               {repo.language && (
                 <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#C6F368]"></div>
+                  <div
+                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
+                    style={{
+                      backgroundColor:
+                        languageColors[repo.language] || languageColors.default,
+                    }}
+                  ></div>
                   <span className="text-[#C7C7C7] text-xs sm:text-sm">
                     {repo.language}
                   </span>
@@ -143,11 +176,6 @@ export default function Repositories() {
                     GitHub →
                   </span>
                 )}
-
-                <div className="flex items-center gap-2 text-[#C7C7C7] text-xs sm:text-sm">
-                  <span>⭐ {repo.stargazers_count}</span>
-                  <span>🍴 {repo.forks_count}</span>
-                </div>
               </div>
             </motion.div>
           );
@@ -201,7 +229,14 @@ export default function Repositories() {
 
                   {repo.language && (
                     <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#C6F368]"></div>
+                      <div
+                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
+                        style={{
+                          backgroundColor:
+                            languageColors[repo.language] ||
+                            languageColors.default,
+                        }}
+                      ></div>
                       <span className="text-[#C7C7C7] text-xs sm:text-sm">
                         {repo.language}
                       </span>
