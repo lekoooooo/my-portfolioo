@@ -110,6 +110,7 @@ export default function Repositories() {
     );
   }
 
+  // s
   if (error) {
     return (
       <div className="flex justify-center items-center py-12">
